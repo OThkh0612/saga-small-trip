@@ -1,0 +1,542 @@
+    /* =================
+    　　基本設定
+    =============== */
+    
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: sans-serif;
+        color: #333;
+        background-color: #fff;
+        line-height: 1.7;
+    }
+
+    /* =================
+    　　ヘッダー・ナビゲーション
+    =============== */
+
+    header {
+        padding: 20px;
+        text-align: center;
+        background-color: #f7f3ea;
+    }
+
+    header h1 {
+        margin: 0;
+        color: #46624f;
+        font-size: 32px;
+        letter-spacing: 0.12em;
+        font-weight: 600;
+    }
+
+    .site-title a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    nav {
+        margin-top: 20px;
+        text-align: center;
+        background-color: #46624f;
+    }
+
+    nav a {
+        display: inline-block;
+        padding: 12px 18px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 14px;
+        letter-spacing: 0.08em;
+    }
+
+    /* =================
+    　　ハンバーガーメニュー
+    =============== */
+
+    .menu-toggle {
+        display: none;
+    }
+
+    /* =================
+    　　メインビジュアル
+    =============== */
+
+    .hero {
+        padding: 60px 20px;
+        text-align: center;
+        background-color: #99bda4;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+        letter-spacing: 0.08em;
+        color: #fbd784;
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    }
+
+    .hero p {
+        font-size: 20px;
+        letter-spacing: 0.05em;
+        color: #fbd784;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    }
+
+    .hero a {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 22px;
+        background-color: #608a6d;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 20px;
+        font-size: 14px;
+        letter-spacing: 0.08em;
+    }
+
+    .hero a:hover {
+        background-color: #5f8168;
+    }
+
+    /* =================
+    　　タイル
+    =============== */
+
+    /*　タイル全体と各タイル　*/
+
+    .tiles {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        padding: 20px;
+    }
+
+    .tile {
+        background-color: #fffdf8;
+        border: 1px solid #ddd;
+        margin-bottom: 20px;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(70, 98, 79, 0.12);
+    }
+
+    .tile:hover {
+        transform: translateY(-5px);
+    }
+
+    /*　カテゴリーとタイルの内容　*/
+
+    .tile-category {
+        color: white;
+        padding: 12px 20px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .scenery {
+        background-color: #6f8f73;
+    }
+
+    .gourmet {
+        background-color: #b07a5a;
+    }
+
+    .onsen {
+        background-color: #7f9db9;
+    }
+
+    .history {
+        background-color: #8a6f9e;
+    }
+
+    .area {
+        background-color: #b59b5b;
+    }
+
+    .course {
+        background-color: #6f8f8a;
+    }
+
+    .tile-item {
+        display: flex;
+    }
+
+    .tile-item img {
+        width: 45%;
+        height: 220px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .tile-text {
+        width: 55%;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .tile h2 {
+        margin: 15px 15px 10px;
+        font-size: 24px;
+    }
+
+    .tile p {
+        line-height: 1.8;
+        margin: 0 18px 18px;
+        color: #555;
+    }
+
+    /*　ボタンとホバー表示　*/
+
+    .tile a {
+        display: inline-block;
+        margin: 0 15px 15px;
+        padding: 8px 8px;
+        background-color: #608a6d;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+        text-align: center;
+    }
+
+    .more-button.scenery {
+        background-color: #6f8f73;
+    }
+
+    .more-button.gourmet {
+        background-color: #b07a5a;
+    }
+
+    .more-button.onsen {
+        background-color: #7f9db9;
+    }
+
+    .more-button.history {
+        background-color: #8a6f9e;
+    }
+
+    .more-button.area {
+        background-color: #b59b5b;
+    }
+
+    .more-button.course {
+        background-color: #6f8f8a;
+    }
+
+    .tile a:hover {
+        opacity: 0.7;
+    }
+
+    /* =================
+    　　サイト紹介(about)
+    =============== */
+
+    .about {
+        margin: 60px auto;
+        padding: 50px 30px;
+        max-width: 900px;
+        text-align: center;
+        background-color: #fffdf8;
+        border-radius: 12px;
+    }
+
+    .about h2 {
+        margin-top: 0;
+        color: #46624f;
+        font-size: 28px;
+        letter-spacing: 0.08em;
+    }
+
+    .about p {
+        line-height: 1.8;
+        color: #555;
+    }
+
+    .about a {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 22px;
+        background-color: #608a6d;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 20px;
+        font-size: 14px;
+        letter-spacing: 0.08em;
+    }
+
+    .about a:hover {
+        background-color: #5f8168;
+    }
+
+    /* =================
+    　　SNS風ギャラリー
+    =============== */
+
+    .sns {
+        margin: 60px auto;
+        padding: 40px 20px;
+        max-width: 1000px;
+        text-align: center;
+    }
+
+    .sns h2 {
+        margin-bottom: 30px;
+        color: #46624f;
+        font-size: 28px;
+        letter-spacing: 0.08em;
+    }
+
+    .sns-images {
+        display: flex;
+        gap: 20px;
+    }
+
+    .sns-images img {
+        width: calc((100% - 40px) / 3);
+        height: 220px;
+        object-fit: cover;
+        display: block;
+        border-radius: 12px;
+    }
+
+    /* =================
+    　　フッター
+    =============== */
+
+    footer {
+        margin-top: 20px;
+        padding: 30px 20px;
+        text-align: center;
+        background-color: #46624f;
+        color: #fff;        
+    }
+
+    footer p {
+        margin: 0;
+    }
+
+    .footer-nav {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .footer-nav a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    /* =================
+    　　トップページの
+    　　スマートフォン表示
+    =============== */
+
+    @media (max-width: 768px) {
+        .tiles {
+            grid-template-columns: 1fr;
+        }
+
+        .tile-item {
+            flex-direction: column;
+        }
+
+        .tile-item img {
+            width: 100%;
+        }
+
+        .tile-text {
+            width: 100%;
+        }
+
+        .sns-images {
+            flex-direction: column;
+        }
+
+        .sns-images img {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background-color: #333;
+        }
+    }
+
+    /* =================
+    　　下層ページ共通箇所
+    =============== */
+
+    /*　ページ上部　*/
+
+    .page-hero {
+        padding: 70px 20px;
+        text-align: center;
+        background-color: #e8f1ee;
+    }
+
+    .page-hero-text h1 {
+        margin: 0 0 10px;
+        color: #46624f;
+        font-size: 36px;
+        letter-spacing: 0.1em;
+    }
+
+    .page-hero-text p {
+        margin: 0;
+        color: #666;
+        font-size: 16px;
+        letter-spacing: 0.05em;
+    }
+
+    /*　共通カード　*/
+
+    .page-card {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        margin: 0;
+        padding: 0;
+        background-color: #fffdf8;
+        border: 1px solid #ddd;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(70, 98, 79, 0.12);
+    }
+
+    .page-card-image {
+        width: 100%;
+    }
+
+    .page-card-image img {
+        display: block;
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .page-card-text {
+        flex: 1;
+        padding: 20px;
+    }
+
+    .page-card-text h3 {
+        margin: 0 0 8px;
+        color: #46624f;
+        font-size: 1.1rem;
+    }
+
+    .page-card-text h3::before {
+        content: "●";
+        margin-right: 8px;
+        color: #46624f;
+        font-size: 0.8em;
+    }
+
+    .page-card-text p {
+        margin: 0;
+        color: #555;
+        line-height: 1.7;
+    }
+
+    /* =================
+    　　下層ページ共通箇所の
+    　　スマートフォン表示
+    　　画面幅768px以下に適用
+    =============== */
+
+    @media (max-width: 768px) {
+        .site-header {
+            padding: 16px 12px;
+            position: relative;
+        }
+
+        .site-header h1 {
+            font-size: 24px;
+        }
+
+        .menu-toggle {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            top: 24px;
+            right: 20px;
+        }
+
+        .menu-toggle span {
+            transition: 0.3s;
+        }
+
+        .menu-toggle[aria-expanded="true"] span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .menu-toggle[aria-expanded="true"] span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle[aria-expanded="true"] span:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
+        .menu-toggle + .site-nav {
+            margin-top: 15px;
+            display: none;
+        }
+
+        .site-nav.is-open {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .page-hero {
+            padding: 50px 20px;
+        }
+
+        .page-hero-text h1 {
+            font-size: 28px;
+        }
+
+        .page-hero-text p br {
+            display: none;
+        }
+
+        .page-card-text {
+            padding: 16px;
+        }
+
+        .page-card-image img {
+            height: 200px;
+        }
+
+        .footer-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px 14px;
+        }
+
+        .site-nav a,
+        .footer-nav a {
+            padding: 6px 4px;
+            white-space: nowrap;
+        }
+    }
