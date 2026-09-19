@@ -540,3 +540,41 @@
             white-space: nowrap;
         }
     }
+
+     /* =================
+    　　ページ上部へ戻るボタン
+    =============== */
+
+    .back-to-top {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        width: 48px;
+        height: 48px;
+        border: none;
+        border-radius: 50%;
+        background-color: #446b52;
+        color: #fff;
+        font-size: 24px;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition:
+            opacity 0.3s,
+            visibility 0.3s,
+            transform 0.3s;
+        z-index: 1000;
+    }
+
+    .back-to-top.is-visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .back-to-top:focus-visible {
+        outline: 3px solid #f4c95d;
+        outline-offset: 3px;
+    }
