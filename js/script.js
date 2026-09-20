@@ -81,3 +81,30 @@
             });
         });
     }
+
+    const gourmetSearchInput = document.querySelector('#gourmet-search-input');
+    const gourmetSearchResult = document.querySelector('#gourmet-search-result');
+    const gourmetItems = document.querySelectorAll('.gourmet-card, .gourmet-other-item');
+
+    if (gourmetSearchInput && gourmetSearchResult && gourmetItems.length > 0) {
+        gourmetSearchInput.addEventListener('input', () => {
+            const keyword = gourmetSearchInput.value.trim().toLowerCase();
+            let visibleCount = 0;
+
+            gourmetItems.forEach((item) => {
+                const itemText = item.textContent.toLowerCase();
+                const isMatch = itemText.includes(keyword);
+
+                item.hidden = !isMatch;
+
+                if (isMatch) {
+                    visibleCount++;
+                }
+            });
+
+            gourmetSearchResult.textContent =
+                visibleCount === 0
+                    ? '該当するグルメはありません。'
+                    : `${visibleCount}件のグルメを表示しています。`;
+        });
+    }

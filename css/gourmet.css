@@ -229,5 +229,41 @@
         .gourmet-tips-list {
             text-align: left;
         }
+    }
 
+    /* =================
+    　　グルメ検索
+    =============== */
+
+    .gourmet-search {
+        text-align: center;
+    }
+
+    .gourmet-search label {
+        display: block;
+        margin-bottom: 12px;
+    }
+
+    .gourmet-search-input {
+        width: min(100%, 520px);
+        padding: 12px 16px;
+        border: 2px solid #6b7f69;
+        border-radius: 8px;
+        background-color: #fff;
+        color: #333;
+        font: inherit;
+    }
+
+    .gourmet-search-input:focus {
+        outline: 3px solid #f4c95d;
+        outline-offset: 3px;
+    }
+
+    .gourmet-search-result {
+        margin-top: 12px;
+    }
+
+    .gourmet-card[hidden],
+    .gourmet-other-item[hidden] {
+        display: none;
     }
