@@ -578,3 +578,20 @@
         outline: 3px solid #f4c95d;
         outline-offset: 3px;
     }
+
+     /* =================
+    　　スクロール表示
+    =============== */
+
+    .scroll-reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition:
+            opacity 0.8s ease,
+            transform 0.8s ease;
+    }
+
+    .scroll-reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
