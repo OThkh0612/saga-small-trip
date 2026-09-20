@@ -123,3 +123,52 @@
             display: none;
         }
     }
+
+    /* =================
+    　　絞り込みぼたん
+    =============== */
+
+    .spots-filter {
+        text-align: center;
+    }
+
+    .filter-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        margin-top: 24px;
+    }
+    
+    .filter-button {
+        padding: 10px 18px;
+        border: 2px solid #5f826c;
+        border-radius: 30px;
+        background-color: #fff;
+        color: #365442;
+        font: inherit;
+        cursor: pointer;
+        transition:
+            background-color 0.3s,
+            color 0.3s,
+            transform 0.3s;
+    }
+
+    .filter-button:hover,
+    .filter-button.is-active {
+        background-color: #5f826c;
+        color: #fff;
+    }
+
+    .filter-button:hover {
+        transform: translateY(-2px);
+    }
+
+    .filter-button:focus-visible {
+        outline: 3px solid #f4c95d;
+        outline-offset: 3px;
+    }
+
+    .spots-section[hidden] {
+        display: none;
+    }

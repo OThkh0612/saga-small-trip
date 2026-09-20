@@ -55,3 +55,29 @@
             revealObserver.observe(element);
         });
     }
+
+    const filterButtons = document.querySelectorAll('.filter-button');
+    const spotsSection = document.querySelectorAll('.spots-section');
+
+    if (filterButtons.length > 0 && spotsSection.length > 0) {
+        filterButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const selectedCategory = button.dataset.filter;
+
+                filterButtons.forEach((item) => {
+                    const isSelected = item === button;
+
+                    item.classList.toggle('is-active', isSelected);
+                    item.setAttribute('aria-pressed', isSelected);
+                });
+
+                spotsSection.forEach((section) => {
+                    const shouldShow =
+                        selectedCategory === 'all' ||
+                        section.id === selectedCategory;
+                    
+                    section.hidden = !shouldShow;
+                });
+            });
+        });
+    }
