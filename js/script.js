@@ -87,6 +87,9 @@
     const gourmetItems = document.querySelectorAll('.gourmet-card, .gourmet-other-item');
 
     if (gourmetSearchInput && gourmetSearchResult && gourmetItems.length > 0) {
+        gourmetSearchResult.textContent =
+            `${gourmetItems.length}件のグルメを表示しています。`;
+            
         gourmetSearchInput.addEventListener('input', () => {
             const keyword = gourmetSearchInput.value.trim().toLowerCase();
             let visibleCount = 0;

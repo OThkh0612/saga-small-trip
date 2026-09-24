@@ -6,15 +6,22 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta name="description" content="佐賀県の自然や風景、グルメ、温泉、歴史・文化などの魅力を紹介するポートフォリオサイトです。">
             <title>佐賀・小さな旅</title>
-
+            <link rel="icon" type="image/png" sizes="512x512" href="images/favicon.PNG">
             <link rel="stylesheet" href="css/style.css">
+            <meta property="og:title" content="佐賀・小さな旅">
+            <meta property="og:description" content="佐賀の自然・文化・グルメ・温泉を紹介する観光Webサイト">
+            <meta property="og:type" content="website">
+            <meta property="og:image" content="images/saga-small-trip-ogp.JPG">
+            <meta name="twitter:card" content="summary_large_image">
         </head>
 
         <body>
 
             <header class="site-header">
                 <p class="site-title">
-                    <a href="index.html">佐賀・小さな旅</a>
+                    <a href="index.html">
+                        <img src="images/saga-title-logo.PNG" alt="佐賀・小さな旅">
+                    </a>
                 </p>
 
                 <button class="menu-toggle"
@@ -46,23 +53,31 @@
 
                 <section class="tiles scroll-reveal">
 
-                    <article class="tile">
-                        <h2>佐賀を旅する</h2>
-                        <p>佐賀の魅力を見つけに行こう。</p>
-                        <a href="course.html">もっとみる</a>
+                    <article class="tile tile-with-icon">
+                        <img class="tile-icon" src="images/icon-course.PNG" alt="">
+                        
+                        <div>
+                            <h2>佐賀を旅する</h2>
+                            <p>佐賀の魅力を見つけに行こう。</p>
+                            <a href="course.html">もっとみる</a>
+                        </div>
                     </article>
 
-                    <article class="tile">
-                        <h2>佐賀について</h2>
-                        <p>佐賀のことをもっと知る。</p>
-                        <a href="about.html">aboutをみる</a>
+                    <article class="tile tile-with-icon">
+                        <img class="tile-icon" src="images/icon-about.PNG" alt="">
+
+                        <div>
+                            <h2>佐賀について</h2>
+                            <p>佐賀のことをもっと知る。</p>
+                            <a href="about.html">aboutをみる</a>
+                        </div>
                     </article>
 
                     <article class="tile">
                         <div class="tile-category scenery">景色</div>
 
                             <div class="tile-item">
-                                <img src="images/imarin-beach.JPG" alt="イマリンビーチ">
+                                <img src="images/imarin-beach-edit.JPG" alt="イマリンビーチ">
 
                                 <div class="tile-text">
                                     <h2>イマリンビーチ</h2>
@@ -94,7 +109,7 @@
                         <div class="tile-category gourmet">グルメ</div>
 
                         <div class="tile-item">
-                            <img src="images/yobuko-squid.JPG" alt="呼子のイカ">
+                            <img src="images/yobuko-squid-edit.JPG" alt="呼子のイカ">
                             
                             <div class="tile-text">
                                 <h2>呼子のイカ</h2>
@@ -126,7 +141,7 @@
                         <div class="tile-category onsen">温泉</div>
 
                         <div class="tile-item">
-                            <img src="images/ureshino-siebold-bath.JPG" alt="嬉野温泉・シーボルトの湯">
+                            <img src="images/ureshino-siebold-bath-edit.JPG" alt="嬉野温泉・シーボルトの湯">
 
                             <div class="tile-text">
                                 <h2>嬉野温泉・シーボルトの湯</h2>
@@ -163,6 +178,24 @@
                             <div class="tile-text">
                                 <h2>大川内山・石畳の街並み</h2>
                                 <p>焼き物の町ならではの風情と、石畳が続く落ち着いた街並みを楽しめる場所。</p>
+                            </div>
+                        </div>
+
+                        <div class="tile-item">
+                            <img src="images/saga-castle-honmaru-history-museum.JPG" alt="佐賀城本丸歴史館">
+
+                            <div class="tile-text">
+                                <h2>佐賀城本丸歴史館</h2>
+                                <p>佐賀城本丸御殿を復元した館内で、佐賀藩の歴史や文化に触れられる博物館。</p>
+                            </div>
+                        </div>
+
+                        <div class="tile-item">
+                            <img src="images/yoshinogari-historical-park.JPG" alt="吉野ヶ里歴史公園">
+
+                            <div class="tile-text">
+                                <h2>吉野ヶ里歴史公園</h2>
+                                <p>弥生時代の大規模な環濠集落を通して、当時の暮らしや文化を体感できる歴史公園。</p>
                                 <a href="spots.html" class="more-button history">歴史・文化を詳しくみる　></a>
                             </div>
                         </div>
@@ -195,7 +228,7 @@
                         <div class="tile-category course">モデルコース</div>
 
                         <div class="tile-item">
-                            <img src="images/" alt="モデルコース">
+                            <img src="images/chikugo-river-lift-bridge.JPG" alt="モデルコース">
 
                             <div class="tile-text">
                                 <h2>モデルコース</h2>
@@ -217,9 +250,9 @@
                 <section class="sns">
                     <h2>佐賀・小さな旅</h2>
                     <div class="sns-images">
-                        <img src="images/imarin-beach.JPG" alt="イマリンビーチ">
-                        <img src="images/yobuko-squid.JPG" alt="呼子のイカ">
-                        <img src="images/ureshino-siebold-bath.JPG" alt="嬉野温泉・シーボルトの湯">
+                        <img src="images/imarin-beach-edit.JPG" alt="イマリンビーチ">
+                        <img src="images/yobuko-squid-edit.JPG" alt="呼子のイカ">
+                        <img src="images/ureshino-siebold-bath-edit.JPG" alt="嬉野温泉・シーボルトの湯">
                     </div>
                 </section>
 

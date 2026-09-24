@@ -35,6 +35,14 @@
     .site-title a {
         color: inherit;
         text-decoration: none;
+        display: inline-block;
+    }
+
+    .site-title img {
+        display: block;
+        width: 360px;
+        max-width: 100%;
+        height: auto;
     }
 
     nav {
@@ -65,23 +73,33 @@
     =============== */
 
     .hero {
+        min-height: 420px;
         padding: 60px 20px;
         text-align: center;
         background-color: #99bda4;
+        background-image: url("../images/saga-hero-background-pc.JPG");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .hero h1 {
         font-size: 36px;
         letter-spacing: 0.08em;
-        color: #fbd784;
-        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+        color: #ecd734;
+        text-shadow: 0 2px 6px rgba(53, 94, 74, 0.85);
     }
 
     .hero p {
         font-size: 20px;
         letter-spacing: 0.05em;
-        color: #fbd784;
-        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+        color: #ecd734;
+        text-shadow: 0 2px 5px rgba(53, 94, 74, 0.9);
     }
 
     .hero a {
@@ -124,6 +142,21 @@
 
     .tile:hover {
         transform: translateY(-5px);
+    }
+
+    .tile.tile-with-icon {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .tile img.tile-icon {
+        display: block;
+        width: 120px;
+        height: 120px;
+        flex: 0 0 120px;
+        object-fit: contain;
+        margin: 0;
     }
 
     /*　カテゴリーとタイルの内容　*/
@@ -451,6 +484,14 @@
         line-height: 1.7;
     }
 
+    .page-hero .page-icon {
+        display: block;
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+        margin: 0 auto 16px;
+    }
+
     /* =================
     　　下層ページ共通箇所の
     　　スマートフォン表示
@@ -505,6 +546,12 @@
             flex-direction: column;
             align-items: center;
             gap: 4px;
+        }
+
+        .hero {
+            background-image: url("../images/saga-hero-background-mobile.JPG");
+            background-position: center;
+            background-size: cover;
         }
 
         .page-hero {
